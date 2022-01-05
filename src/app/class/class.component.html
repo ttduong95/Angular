@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="studentname" />
+<button (click)="oncreatesudent()" type="button" [disabled]="!alowAddStudent">Add student</button>
+
+<p *ngIf="studentname.length >0" >gia tri dc nhap: {{studentname}}</p>
+<p *ngIf="creaded">{{notification}}</p>
+<SV *ngFor="let sv of sinhvien" [name]="sv" ></SV>
