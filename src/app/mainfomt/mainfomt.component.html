@@ -1,0 +1,32 @@
+
+<input type="email" [(ngModel)]="email" placeholder="Email" required /><br/>
+<input type="text" [(ngModel)]="name" placeholder="Name" required /><br/>
+<input type="date" [(ngModel)]="date" placeholder="Birthday" required /><br/>
+<input type="text" [ngModel]="user" placeholder="User" required /><br/>
+<input type="password" [ngModel]="pass" placeholder="PassWord" required /><br/>
+<input type="password" [ngModel]="pass" placeholder="RES-PassWord" required /><br/>
+<select [ngModel]="gender">
+  <option value="select">Select</option>
+  <option value="nam">Nam</option>
+  <option value="nu">Nu</option>
+</select>
+
+
+<button type="button" (click)="onmenu()">Summit</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody>
+<tr>
+  <th><fomt *ngFor="let sv of names" [name]="sv" ></fomt></th>
+  <th> <fomt *ngFor="let sv of dates" [date]="sv" ></fomt></th>
+  <th>  <fomt *ngFor="let sv of emails" [email]="sv" ></fomt></th>
+</tr>
+  </tbody>
+</table>
