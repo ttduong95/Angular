@@ -16,10 +16,14 @@ import {WebComponent} from "./web/web.component";
 import {ShopComponent} from "./shop/shop.component";
 import {FooderComponent} from "./fooder/fooder.component";
 import {SectionComponent} from "./section/section.component";
+import {WeatherComponent} from "./weather/weather.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {CreateComponent} from "./create/create.component";
+import {AddComponent} from "./add/add.component";
 const  appRoutes: Routes=[
-  {path:"",component:BodyComponent},
-  {path:"shop",component:ShopComponent},
-  {path:"blog",component:WebComponent},
+  {path:"",component:HomeComponent},
+  {path:"regis",component:RegisterComponent},
+  {path:"wea",component:WeatherComponent},
 
 ]
 
@@ -37,10 +41,13 @@ const  appRoutes: Routes=[
     WebComponent,
     ShopComponent,
     FooderComponent,SectionComponent,
+    WeatherComponent,
+    CreateComponent,AddComponent,
   ],
   imports: [
     BrowserModule,FormsModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
 
   ],
   providers: [],
