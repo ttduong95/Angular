@@ -21,8 +21,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {CreateComponent} from "./create/create.component";
 import {AddComponent} from "./add/add.component";
 const  appRoutes: Routes=[
-  {path:"",component:HomeComponent},
-  {path:"regis",component:RegisterComponent},
+  {path:"",component:CreateComponent},
+  {path:"regis",component:AddComponent},
   {path:"wea",component:WeatherComponent},
 
 ]
