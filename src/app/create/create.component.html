@@ -1,0 +1,52 @@
+<div class="form1">
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      class="form-control"
+      ngModel
+      name="email"
+      required
+      email
+      #email="ngModel"
+    />
+    <span *ngIf="!email.valid && email.touched" class="help-block">
+        Please enter valid email</span>
+  </div>
+  <div class="form-group">
+    <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Add Product</button>
+  </div>
+  <div class="form-group">
+    <table class="table table-striped">
+      <tr>
+        <th>them hoac xoa</th>
+        <th>ten san pham</th>
+        <th>gia san pham</th>
+      </tr>
+      <tr>
+        <td><button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Delete</button>
+        </td>
+        <td>san pham mot</td>
+        <td>$22.50</td>
+      </tr>
+      <tr>
+        <td><button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" class="btn btn-primary">Delete</button>
+        <td>san pham hai</td>
+        <td>$15.00</td>
+      </tr>
+      <tr>
+        <td><button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" class="btn btn-primary">Delete</button>
+
+        <td>san pham ba</td>
+        <td>$123.82</td>
+      </tr>
+
+    </table>
+  </div>
+</form>
+</div>
